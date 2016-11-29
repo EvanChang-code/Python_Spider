@@ -21,6 +21,18 @@
 	'yes' if num==0 else 'no'
 
 ## 爬取的数据写入到数据库中
+* 对数据库的操作
+* 需要注意的问题：被爬取网站的页码限制
+
+## 爬取58同城所有的二手商品的数据
+* 对于很多的字符串用''' '''表示
+* 对于`split()`函数的灵活使用
+* 数据库中需要插入的字典或者是其他
+* 对于进程池的使用
+
+* 快速检索出需要的信息
+* 在没有的时候，怎么停止，时写return或者是跳出
+* IP的获取，http://cn-proxy.com,使用ranodm.choice()方法
 	
 
 **这周的问题**
@@ -80,6 +92,45 @@ code——Start
 	注意可能页面中没有链接
 3. 抓取一个链接中的信息，放入到数据库中
 	注意存在404不能访问的页面
+
+## 多线程和多进程
+* 创建一个新的py文件
+* 多进程的库，multiprocessing import Pool
+* 引用自己的库
+* 从文件中导入方法
+* 构建一个新的函数
+
+* 创建进程池 pool  = Pool(),所有的爬虫都会被扔进池子中，自动分配
+* map函数
+
+## 让数据说话
+
+	tab会提醒
+	enter是下一行
+	shift+enter是执行一个cell中的代码
+* 整理清洗数据
+	链接到数据库
+	将数据整理出来
+	引入标点符号库 from string import punctuation
+	
+		使用索引的方法进行,{'_id':i['id']}
+* 更新到数据库
+	一般修改数据前，需要先备份数据，新建terminal，
+		mongod
+		mongo
+		show dbs
+		use xx
+		show tables (collections)
+		db.createCollection('xx')创建新的数据库
+		db.xx.copyTo('xx')
+	然后重新放入数据库中，使用update(file, change where) 
+		file:{id:1}(元素)
+		change where {$set:{name:2}}表示怎么修改
+		将{id:1}改变成{name:2} 
+* 数据的可视化
+
+
+
 
 
 
