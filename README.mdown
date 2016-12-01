@@ -113,7 +113,7 @@ code——Start
 	将数据整理出来
 	引入标点符号库 from string import punctuation
 	
-		使用索引的方法进行,{'_id':i['id']}
+		使用索引的方法进行,{'_id':i['id']} # 因为都会存在`_id`
 * 更新到数据库
 	一般修改数据前，需要先备份数据，新建terminal，
 		mongod
